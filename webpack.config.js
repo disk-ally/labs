@@ -1,24 +1,18 @@
 var webpack = require('webpack');
 var path = require('path');
 
-var PROD = JSON.parse(process.env.NODE_ENV || '0');
-
-var BUILD_DIR = path.resolve(__dirname, 'src/client/public');
-var APP_DIR = path.resolve(__dirname, 'src/client/app');
+var APP_PATH = 'src/client/app/';
+var APP_DIR = path.resolve(__dirname, APP_PATH);
+var BUNDLE_DIR = path.resolve(__dirname, 'bundle/');
 
 var config = {
   entry: APP_DIR + '/app.jsx',
-  /*resolve: {
-      alias: {
-          'react': 'react-lite',
-          'react-dom': 'react-lite'
-      }
-  },*/
   output: {
-    path: BUILD_DIR,
-    filename: 'js/bundle.js'
+    path: BUNDLE_DIR,
+    filename: 'bundle.js'
   },
 
+  /*
   plugins: [
     new webpack.DefinePlugin({
       "process.env": {
@@ -26,6 +20,7 @@ var config = {
       }
     }),
     ] , 
+*/
 
   module : {
     loaders : [
@@ -34,7 +29,6 @@ var config = {
         include : APP_DIR,
         loader : 'babel'
       },
-	 { test: /\.svg$/, loader: 'babel!svg-react' }
     ],
       resolve: {
         alias: {
