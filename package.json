@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/.bin/webpack -p --progress --colors --optimize-occurrence-order --optimize-dedupe",
-    "develop": "npm start && ./node/.bin/webpack -d --watch",
-    "start": "node server.js"
+    "start": "webpack && electron ."
   },
   "repository": {
     "type": "git",
@@ -31,6 +30,9 @@
     "webpack": "^1.13.1"
   },
   "devDependencies": {
+    "electron-debug": "^1.0.0",
+    "electron-packager": "^7.0.3",
+    "electron-prebuilt": "^1.2.2",
     "react-dom": "^15.1.0"
   }
 }
