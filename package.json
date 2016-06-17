@@ -32,10 +32,14 @@
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-preset-react": "^6.5.0",
+    "d3": "^3.5.17",
+    "d3-react": "^1.0.4",
     "electron-debug": "^1.0.0",
     "electron-packager": "^7.0.3",
     "electron-prebuilt": "^1.2.2",
     "fs": "0.0.2",
+    "rd3": "^0.6.3",
+    "react-d3-components": "^0.6.4",
     "react-dom": "^15.1.0"
   }
 }
