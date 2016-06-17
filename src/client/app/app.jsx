@@ -22,7 +22,7 @@ class App extends React.Component {
         const initialMessage = "loading";
 
         // Default path (only macOs)
-        // TODO: support windows enviroment
+        // TODO: support windows environment
         const firstpath = "/users";
         var firstSet = new Set();
         firstSet.add(firstpath);
